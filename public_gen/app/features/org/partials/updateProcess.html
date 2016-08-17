@@ -1,0 +1,41 @@
+<div class="modal-body" ng-controller="UserInviteCtrl" ng-init="init()">
+
+  <div class="modal-header">
+    <h2 class="modal-header-title">
+      Update Process
+    </h2>
+    <a class="modal-header-close" ng-click="dismiss();">
+      <i class="fa fa-remove"></i>
+    </a>
+  </div>
+
+  <div class="modal-content">
+
+    <div class="modal-tagline p-b-2">
+      Updating the process of  the organization
+      <span class="highlight-word">{{contextSrv.user.orgName}}</span>
+    </div>
+
+    <form name="ctrl.updateForm">
+      <div class="gf-form">
+        <span class="gf-form-label width-9">Process Name</span>
+        <input class="gf-form-input max-width-21" type="text" required ng-model="p.processName" >
+      </div>
+      <div class="gf-form">
+        <span class="gf-form-label width-9">Parent Name</span>
+        <input class="gf-form-input max-width-21" type="text" required ng-model="p.parentProcessName">
+      </div>
+      <div class="gf-form">
+        <span class="gf-form-label width-9">Updated By</span>
+        <input class="gf-form-input max-width-21" type="text" required ng-model="p.updatedBy">
+      </div>
+      <div class="gf-form-button-row">
+        <button type="submit" class="btn btn-success" ng-click="sendProcess();">Update Process</button>
+        <a class="btn-text" ng-click="dismiss()">Cancel</a>
+      </div>
+      <div class="clearfix"></div>
+
+    </form>
+
+  </div>
+</div>
